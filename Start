@@ -1,5 +1,23 @@
 import time
 
+print("""------------------------------------------------------------------------
+Hello and welcome to the Baleeni inc. Restaurant management software
+------------------------------------------------------------------------""")
+
+time.sleep(2.5)
+
+print ("What would you like to do?")
+
+choice = int(input("""------------------------------------------------------------------------
+1) Select order for the customer
+2) View customer reports
+3) View profit reports
+------------------------------------------------------------------------
+Choice: """))
+
+if choice == 1:
+
+
 people = int(input("""-----------------------------------------------------
 How many people are present at the table?: 
 -----------------------------------------------------"""))
@@ -25,7 +43,7 @@ if people == 1:
 
 more = int(input("Do they want anything else?(y or n): "))
 if more == "y":
-    choice1 = int(input("""-----------------------------------------------------
+    choice2 = int(input("""-----------------------------------------------------
     What do they want for their breakfast?
     -----------------------------------------------------
     1) Full English Breakfast
@@ -34,11 +52,11 @@ if more == "y":
     4) Cereal
     -----------------------------------------------------
     Answer: """))
-     if choice1 == 1:
-         breakfast1 = ("FEB")
-     elif choice1 == 2:
-         breakfast1 = ("EOT")
-     elif choice1 == 3:
-         breakfast1 = ("TAJ")
-     elif choice1 == 4:
-         breakfast1 = ("C")
+     if choice2 == 1:
+         breakfast2 = ("FEB")
+     elif choice2 == 2:
+         breakfast2 = ("EOT")
+     elif choice2 == 3:
+         breakfast2 = ("TAJ")
+     elif choice2 == 4:
+         breakfast2 = ("C")
