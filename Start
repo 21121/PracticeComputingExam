@@ -1,0 +1,44 @@
+import time
+
+people = int(input("""-----------------------------------------------------
+How many people are present at the table?: 
+-----------------------------------------------------"""))
+
+if people == 1:
+    choice1 = int(input("""-----------------------------------------------------
+    What do they want for their breakfast?
+    -----------------------------------------------------
+    1) Full English Breakfast
+    2) Eggs on toast
+    3) Toast with assortment of jams
+    4) Cereal
+    -----------------------------------------------------
+    Answer: """))
+    if choice1 == 1:
+        breakfast1 = ("FEB")
+    elif choice1 == 2:
+        breakfast1 = ("EOT")
+    elif choice1 == 3:
+        breakfast1 = ("TAJ")
+    elif choice1 == 4:
+        breakfast1 = ("C")
+
+more = int(input("Do they want anything else?(y or n): "))
+if more == "y":
+    choice1 = int(input("""-----------------------------------------------------
+    What do they want for their breakfast?
+    -----------------------------------------------------
+    1) Full English Breakfast
+    2) Eggs on toast
+    3) Toast with assortment of jams
+    4) Cereal
+    -----------------------------------------------------
+    Answer: """))
+     if choice1 == 1:
+         breakfast1 = ("FEB")
+     elif choice1 == 2:
+         breakfast1 = ("EOT")
+     elif choice1 == 3:
+         breakfast1 = ("TAJ")
+     elif choice1 == 4:
+         breakfast1 = ("C")
