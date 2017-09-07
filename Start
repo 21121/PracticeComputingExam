@@ -14,11 +14,8 @@ choice = int(input("""----------------------------------------------------------
 3) View profit reports
 ------------------------------------------------------------------------
 Choice: """))
-
 if choice == 1:
-
-
-people = int(input("""-----------------------------------------------------
+    people = int(input("""-----------------------------------------------------
 How many people are present at the table?: 
 -----------------------------------------------------"""))
 
@@ -60,3 +57,26 @@ if more == "y":
          breakfast2 = ("TAJ")
      elif choice2 == 4:
          breakfast2 = ("C")
+
+more = int(input("Do they want anything else?(y or n): "))
+if more == "y":
+    choice3 = int(input("""-----------------------------------------------------
+    What do they want for their breakfast?
+    -----------------------------------------------------
+    1) Full English Breakfast
+    2) Eggs on toast
+    3) Toast with assortment of jams
+    4) Cereal
+    -----------------------------------------------------
+    Answer: """))
+     if choice3 == 1:
+         breakfast3 = ("FEB")
+     elif choice3 == 2:
+         breakfast3 = ("EOT")
+     elif choice3 == 3:
+         breakfast3 = ("TAJ")
+     elif choice3 == 4:
+         breakfast3 = ("C")
+
+if more == "n":
+
