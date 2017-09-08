@@ -1,4 +1,5 @@
 import time
+import os.path 
 
 print("""------------------------------------------------------------------------
 Hello and welcome to the Baleeni inc. Restaurant management software
@@ -15,12 +16,21 @@ choice = int(input("""----------------------------------------------------------
 ------------------------------------------------------------------------
 Choice: """))
 if choice == 1:
+    timeofday = int(input("What time of day is it?(b,l,d): ")
+    if timeofday == "b":
+       breakfast()
+
+def breakfast():
+    fh = open("Breakfast.txt", "r")
+    fh.close()
+    breakfastmenu = ['FEB' , 'EOT' , 'TOJ' , 'C']
     people = int(input("""-----------------------------------------------------
-How many people are present at the table?: 
------------------------------------------------------"""))
+    How many people are present at the table?: 
+    -----------------------------------------------------
+    Choice: """))
 
-if people == 1:
-    choice1 = int(input("""-----------------------------------------------------
+    if people == 1:
+       choice1 = int(input("""-----------------------------------------------------
     What do they want for their breakfast?
     -----------------------------------------------------
     1) Full English Breakfast
@@ -29,18 +39,17 @@ if people == 1:
     4) Cereal
     -----------------------------------------------------
     Answer: """))
-    if choice1 == 1:
-        breakfast1 = ("FEB")
-    elif choice1 == 2:
-        breakfast1 = ("EOT")
-    elif choice1 == 3:
-        breakfast1 = ("TAJ")
-    elif choice1 == 4:
-        breakfast1 = ("C")
-
-more = int(input("Do they want anything else?(y or n): "))
-if more == "y":
-    choice2 = int(input("""-----------------------------------------------------
+       if choice1 == 1:
+           breakfast1 = breakfastmenu[0]
+       elif choice1 == 2:
+           breakfast1 = breakfastmenu[1]
+       elif choice1 == 3:
+           breakfast1 = breakfastmenu[2]
+       elif choice1 == 4:
+           breakfast1 = breakfastmenu[3]
+       more = int(input("Do they want anything else?(y or n): "))
+       if more == "y":
+          choice2 = int(input("""-----------------------------------------------------
     What do they want for their breakfast?
     -----------------------------------------------------
     1) Full English Breakfast
@@ -49,18 +58,17 @@ if more == "y":
     4) Cereal
     -----------------------------------------------------
     Answer: """))
-     if choice2 == 1:
-         breakfast2 = ("FEB")
-     elif choice2 == 2:
-         breakfast2 = ("EOT")
-     elif choice2 == 3:
-         breakfast2 = ("TAJ")
-     elif choice2 == 4:
-         breakfast2 = ("C")
-
-more = int(input("Do they want anything else?(y or n): "))
-if more == "y":
-    choice3 = int(input("""-----------------------------------------------------
+          if choice2 == 1:
+              breakfast2 = breakfastmenu[0]
+          elif choice2 == 2:
+              breakfast2 = breakfastmenu[1]
+          elif choice2 == 3:
+              breakfast2 = breakfastmenu[2]
+          elif choice2 == 4:
+              breakfast2 = breakfastmenu[3]
+          more = int(input("Do they want anything else?(y or n): "))
+          if more == "y":
+              choice3 = int(input("""-----------------------------------------------------
     What do they want for their breakfast?
     -----------------------------------------------------
     1) Full English Breakfast
@@ -69,14 +77,20 @@ if more == "y":
     4) Cereal
     -----------------------------------------------------
     Answer: """))
-     if choice3 == 1:
-         breakfast3 = ("FEB")
-     elif choice3 == 2:
-         breakfast3 = ("EOT")
-     elif choice3 == 3:
-         breakfast3 = ("TAJ")
-     elif choice3 == 4:
-         breakfast3 = ("C")
+              if choice3 == 1:
+                 breakfast3 = breakfastmenu[0]
+              elif choice3 == 2:
+                 breakfast3 = breakfastmenu[1]
+              elif choice3 == 3:
+                 breakfast3 = breakfastmenu[2]
+              elif choice3 == 4:
+                 breakfast3 = breakfastmenu[3]
+    if more == "n":
+       fh = open("Breakfast.txt", "w")
+       writtenbreakfast = [breakfast1 , breakfast2 , breakfast3]
+       fh.writelines(writtenbreakfast)
+       fh.close()
 
-if more == "n":
+
+ 
 
